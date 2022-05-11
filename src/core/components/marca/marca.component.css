@@ -1,0 +1,32 @@
+.title-card {
+  padding-top: 50px;
+  padding-left: 30px;
+  padding-bottom: 50px;
+  font-size: 32px;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 33px;
+}
+
+
+.card-main {
+  background-color: #f5f3f3;
+}
+
+.button-select {
+  border-radius: 10px;
+  color: aliceblue;
+  background-color: #50c755;
+  font-size: 16px;
+}
+
+.seleccionar-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
