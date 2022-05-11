@@ -1,0 +1,40 @@
+.principal{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  column-gap: 40px;
+  row-gap: 40px;
+  padding: 50px;
+}
+
+.cards-estaciones{
+  display: flex;
+  flex-flow: row wrap; /*Une dos propiedades flex-direction y flex-wrap*/
+  column-gap: 46px;
+}
+
+.card-individual{
+  width: 340px;
+  height: 408px;
+}
+
+.img-gasolinera {
+  width: 340px;
+  height: 221px;
+}
+
+.direccion{
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+  padding-top: 50px;
+  padding-bottom: 5px;
+}
+
+table {
+  width: 100%;
+}
+
+.div-table {
+  width: 800px;
+}

@@ -5,7 +5,7 @@
       <mat-card class="cards-marcas" *ngFor="let marca of marcas">
         <mat-card-content>
           <div>
-            <img class="img-gasolinera" src="../../../assets/fullok.jpg" alt="">
+            <img class="img-gasolinera" src="../../../assets/{{marca.img}}" alt="{{marca.img}}">
           </div>
           <div class="nombre-seleccionar">
             <strong class="nombre-marca">{{marca.nombre}}</strong>
