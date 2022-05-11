@@ -7,15 +7,32 @@
 
 .card-content {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap; /*Une dos propiedades flex-direction y flex-wrap*/
   justify-content: center;
-  column-gap: 33px;
+  column-gap: 35px;
+  row-gap: 35px;
 }
-
 
 .card-main {
   background-color: #f5f3f3;
+}
+
+.cards-marcas{
+  width: 340px;
+  height: 408px;
+}
+
+.img-gasolinera {
+  width: 340px;
+  height: 221px;
+}
+
+.nombre-seleccionar{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 46px;
 }
 
 .button-select {
@@ -23,10 +40,16 @@
   color: aliceblue;
   background-color: #50c755;
   font-size: 16px;
+  width: 250px;
 }
 
 .seleccionar-item {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.nombre-marca{
+  padding-top: 39px;
+  font-size: 24px;
 }

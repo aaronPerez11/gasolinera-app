@@ -2,10 +2,13 @@
   <mat-card class="card-main">
     <mat-card-title class="title-card">Seleccione la empresa a visitar</mat-card-title>
     <mat-card-content class="card-content">
-      <mat-card *ngFor="let marca of marcas">
+      <mat-card class="cards-marcas" *ngFor="let marca of marcas">
         <mat-card-content>
           <div>
-            <p>{{marca.nombre}}</p>
+            <img class="img-gasolinera" src="../../../assets/fullok.jpg" alt="">
+          </div>
+          <div class="nombre-seleccionar">
+            <strong class="nombre-marca">{{marca.nombre}}</strong>
             <button mat-raised-button class="button-select" (click)="irGasolinera(marca.id)">
               Seleccionar
             </button>
