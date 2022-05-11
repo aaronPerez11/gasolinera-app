@@ -11,6 +11,8 @@ import { GasolineraService } from 'src/core/services/gasolinera.service';
 export class GasolineraComponent implements OnInit {
   gasolineras: Estacion[] = [];
   marcaId: number = this.route.snapshot.params['id'];
+  buscador: string = '';
+  activarButton: boolean = true;
 
   constructor(private gasolineraService: GasolineraService,
     private router: Router,
@@ -30,6 +32,9 @@ export class GasolineraComponent implements OnInit {
   }
 
   buscarGasolinera(ubicacion:string){
+    if(ubicacion.length >= 5){
+      this.gasolineras = this.gasolineras.filter(e => e.direccion.includes(ubicacion));
+    }
 
   }
 

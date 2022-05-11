@@ -1,5 +1,54 @@
+.contenedor-principal{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .input-search{
   border-color: black;
-  background-color: aqua;
   border-radius: 20px;
+}
+
+.cards-estaciones{
+  display: flex;
+  flex-flow: row wrap; /*Une dos propiedades flex-direction y flex-wrap*/
+  column-gap: 46px;
+}
+
+.card-individual{
+  width: 340px;
+  height: 408px;
+}
+
+.button-select {
+  border-radius: 10px;
+  color: aliceblue;
+  background-color: #50c755;
+  font-size: 16px;
+  width: 250px;
+}
+
+.img-gasolinera {
+  width: 340px;
+  height: 221px;
+}
+
+.direccion-seleccionar{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.direccion{
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
+
+.div-buscador{
+  padding-bottom: 80px;
 }

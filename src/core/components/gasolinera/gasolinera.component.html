@@ -1,22 +1,28 @@
-<div>
-  <mat-form-field>
-    <input matInput placeholder="Ubicar gasolinera" class="input-search"/>
-    <button matSuffix mat-icon-button >
+<div class="contenedor-principal">
+  <mat-form-field class="div-buscador">
+    <input matInput placeholder="Ubicar gasolinera" type="text" class="input-search" [(ngModel)]="buscador"/>
+    <button matSuffix mat-icon-button (click)="buscarGasolinera(buscador)">
       <mat-icon>search</mat-icon>
     </button>
   </mat-form-field>
-</div>
-<div>
-  <mat-card *ngFor="let gasolinera of gasolineras">
-    <mat-card-content>
-      <div>
-        <p>{{gasolinera.direccion}}</p>
-      </div>
-      <div>
-        <button mat-raised-button class="button-select" (click)="irEstaciones(gasolinera.id)">
-          Seleccionar
-        </button>
-      </div>
-    </mat-card-content>
-  </mat-card>
+  <div class="cards-estaciones">
+    <mat-card class="card-individual" *ngFor="let gasolinera of gasolineras">
+      <mat-card-content>
+        <div>
+          <img class="img-gasolinera" src="../../../assets/fullok.jpg" alt="">
+        </div>
+        <div class="direccion-seleccionar">
+          <div class="direccion">
+            <strong>Dirección:</strong>
+            <p>{{gasolinera.direccion}}</p>
+          </div>
+          <div>
+            <button mat-raised-button class="button-select" (click)="irEstaciones(gasolinera.id)">
+              Seleccionar
+            </button>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
 </div>
