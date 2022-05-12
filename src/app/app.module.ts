@@ -19,6 +19,8 @@ import {MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import {MatTableModule} from '@angular/material/table';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     MatIconModule,
     FormsModule,
     MatTableModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatTooltipModule,
+    PdfViewerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

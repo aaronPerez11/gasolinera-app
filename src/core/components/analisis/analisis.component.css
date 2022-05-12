@@ -5,5 +5,4 @@ table {
 .div-table {
   display: flex;
   flex-direction: row;
-  width: 1200px;
 }
