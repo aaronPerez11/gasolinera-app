@@ -7,21 +7,27 @@ import { AppComponent } from './app.component';
 import { MarcaComponent } from 'src/core/components/marca/marca.component';
 import { GasolineraComponent } from 'src/core/components/gasolinera/gasolinera.component';
 import { EstacionesComponent } from 'src/core/components/estaciones/estaciones.component';
+import { AnalisisComponent } from 'src/core/components/analisis/analisis.component';
+import { DocumentoComponent } from 'src/core/components/documento/documento.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
-import {MatIconModule} from '@angular/material/icon';
+import {MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import {MatTableModule} from '@angular/material/table';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
     AppComponent,
     MarcaComponent,
     GasolineraComponent,
-    EstacionesComponent
+    EstacionesComponent,
+    AnalisisComponent,
+    DocumentoComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +40,8 @@ import {MatTableModule} from '@angular/material/table';
     MatInputModule,
     MatIconModule,
     FormsModule,
-    MatTableModule
+    MatTableModule,
+    MatProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,9 @@
+table {
+  width: 100%;
+}
+
+.div-table {
+  display: flex;
+  flex-direction: row;
+  width: 1200px;
+}

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Estacion } from 'src/core/models/Estacion';
 import { TipoEstacion } from 'src/core/models/TipoEstacion';
@@ -30,7 +30,8 @@ export class EstacionesComponent implements OnInit {
   idGasolinera: number = this.route.snapshot.params['id'];
 
   constructor( private gasolineraService: GasolineraService,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.getEstaciones();
@@ -56,6 +57,6 @@ export class EstacionesComponent implements OnInit {
   }
 
   getDataRow(item:TipoEstacion){
-    console.log(item)
+    this.router.navigate(['verificador'])
   }
 }
