@@ -9,6 +9,7 @@ import { GasolineraComponent } from 'src/core/components/gasolinera/gasolinera.c
 import { EstacionesComponent } from 'src/core/components/estaciones/estaciones.component';
 import { AnalisisComponent } from 'src/core/components/analisis/analisis.component';
 import { DocumentoComponent } from 'src/core/components/documento/documento.component';
+import { LoginComponent } from 'src/core/components/login/login.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -29,7 +30,8 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
     GasolineraComponent,
     EstacionesComponent,
     AnalisisComponent,
-    DocumentoComponent
+    DocumentoComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
