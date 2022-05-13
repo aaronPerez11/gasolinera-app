@@ -1,6 +1,9 @@
 <div class="contenedor-principal">
-  <mat-form-field class="div-buscador">
+  <mat-form-field class="div-buscador" appearance="outline">
     <input matInput placeholder="Ubicar gasolinera" type="text" class="input-search" [(ngModel)]="buscador"/>
+    <button matSuffix mat-icon-button (click)="cancelarBusqueda()" [disabled]="borrarBuscador">
+      <mat-icon>clear</mat-icon>
+    </button>
     <button matSuffix mat-icon-button (click)="buscarGasolinera(buscador)">
       <mat-icon>search</mat-icon>
     </button>

@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { ErrorModel } from 'src/core/models/ErrorModel';
 import { Estacion } from 'src/core/models/Estacion';
 import { TipoEstacion } from 'src/core/models/TipoEstacion';
 import { GasolineraService } from 'src/core/services/gasolinera.service';
+import { ErrorModelComponent } from 'src/core/shared/components/error-model/error-model.component';
 
 @Component({
   selector: 'app-estaciones',
@@ -13,6 +15,7 @@ import { GasolineraService } from 'src/core/services/gasolinera.service';
 export class EstacionesComponent implements OnInit {
   displayedColumns: string[] = ['id','codigo','combustible','action'];
   estaciones: TipoEstacion[] = [];
+  ocultarContenido: boolean = false;
   estacion: Estacion = {
     id: 0,
     nombre: "",
@@ -26,12 +29,14 @@ export class EstacionesComponent implements OnInit {
     }
   }
 
+
   idMarca: number = this.route.snapshot.queryParams['idMarca'];
   idGasolinera: number = this.route.snapshot.params['id'];
 
   constructor( private gasolineraService: GasolineraService,
     private route: ActivatedRoute,
-    private router: Router) { }
+    private router: Router,
+    private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
     this.getEstaciones();
@@ -43,7 +48,14 @@ export class EstacionesComponent implements OnInit {
     .getEstacionesGasolinerasByMarcaId(this.idMarca, this.idGasolinera)
     .subscribe(dataEstaciones => {
       this.estaciones = dataEstaciones;
-      console.log(dataEstaciones);
+    }, (error: ErrorModel) => {
+      this.ocultarContenido = true
+      this.snackBar.openFromComponent(ErrorModelComponent, {
+        duration: 3000,
+        data: error
+      }).afterDismissed().subscribe(() => {
+        this.router.navigate(['gasolinera', this.idMarca])
+      })
     })
   }
 
@@ -52,7 +64,6 @@ export class EstacionesComponent implements OnInit {
     .getEstacionGasolineraById(id,idGasolinera)
     .subscribe(dataGasolinera => {
       this.estacion = dataGasolinera;
-      console.log(this.estacion);
     })
   }
 

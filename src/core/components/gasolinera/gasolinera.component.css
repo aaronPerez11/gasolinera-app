@@ -1,22 +1,22 @@
-.contenedor-principal{
+.contenedor-principal {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.input-search{
+.input-search {
   border-color: black;
   border-radius: 20px;
 }
 
-.cards-estaciones{
+.cards-estaciones {
   display: flex;
   flex-flow: row wrap; /*Une dos propiedades flex-direction y flex-wrap*/
   column-gap: 46px;
 }
 
-.card-individual{
+.card-individual {
   width: 340px;
   height: 408px;
 }
@@ -34,14 +34,14 @@
   height: 221px;
 }
 
-.direccion-seleccionar{
+.direccion-seleccionar {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.direccion{
+.direccion {
   display: flex;
   flex-direction: row;
   column-gap: 10px;
@@ -49,6 +49,10 @@
   padding-bottom: 5px;
 }
 
-.div-buscador{
-  padding-bottom: 80px;
+.div-buscador {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 500px;
 }
+
+
